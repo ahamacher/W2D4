@@ -70,7 +70,7 @@ def sub_sum_2(arr)
     max_sub_sum = max( max_sub_sum, max_ending )
     i += 1
   end
-  max_sub_sum
+  max_sub_sum 
 end
 
 def max(a, b)

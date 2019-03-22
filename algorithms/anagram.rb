@@ -39,7 +39,7 @@ end
 puts third_anagram?("iceman","cinema") == true 
 
 
-# o(ns)
+# o(n)
 def fourth_anagram?(str1, str2)
   counts = Hash.new(0)
 
@@ -50,11 +50,11 @@ def fourth_anagram?(str1, str2)
   str2.each_char do |char|
     counts[char] -= 1
   end
-
-  counts.each do |k,v|
-    return false if v != 0  
-  end
-  true
+  counts.all? {|k,v| v == 0}
+  # counts.each do |k,v|
+  #   return false if v != 0  
+  # end
+  # true
 
 end
 
